@@ -1,5 +1,6 @@
 package com.validations.validationsWithGlobalExceptionHandling;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,11 @@ public class EmployeeService {
 	       employee.setCreationDate(new Date());
 		   return EmployeeRepo.save(employee);
 				  
+	}
+
+	public List<Employee> getEmployee() {
+		
+		return EmployeeRepo.findAll();
 	}
 
 }
